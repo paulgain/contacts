@@ -22,4 +22,3 @@ jobs:
         yarn
         yarn build --if-present
         yarn test
-        echo $FIRST_NAME ${{ secrets.LAST_NAME }}
