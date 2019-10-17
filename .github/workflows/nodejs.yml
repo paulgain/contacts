@@ -30,4 +30,4 @@ jobs:
         FIRST_NAME: Paul
         LAST_NAME: ${{ secrets.LAST_NAME }}
       run | 
-        echo $FIRST_NAME $LAST_NAME.
+        echo $FIRST_NAME $LAST_NAME
