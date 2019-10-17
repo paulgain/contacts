@@ -6,8 +6,8 @@ jobs:
   one:
     runs-on: ubuntu-16.04
     steps:
-      - name Environent variables 
+      - name: My first action
         env:
-          FIRST_NAME: ${{ secrets.FIRST_NAME }}
+          FIRST_NAME: ${{ secrets.GITHUB_TOKEN }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
         run: echo "$FIRST_NAME"
