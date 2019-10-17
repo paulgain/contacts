@@ -1,0 +1,13 @@
+name: Dump
+
+on: push
+
+jobs:
+  one:
+    runs-on: ubuntu-16.04
+    steps:
+      - name Environent variables 
+        env:
+          FIRST_NAME: ${{ secrets.FIRST_NAME }}
+          LAST_NAME: ${{ secrets.LAST_NAME }}
+        run: echo "$FIRST_NAME"
