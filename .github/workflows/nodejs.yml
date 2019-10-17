@@ -22,7 +22,7 @@ jobs:
         FIRST_NAME: ${{ secrets.FIRST_NAME }}
         LAST_NAME: ${{ secrets.LAST_NAME }}
       run: |
-        echo $FIRST_NAME $LAST_NAME
+        echo ${{ secrets.FIRST_NAME }}
     - name: yarn install, build, and test
       run: |
         yarn
