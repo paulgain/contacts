@@ -29,5 +29,5 @@ jobs:
         CI: true
         FIRST_NAME: Paul
         LAST_NAME: ${{ secrets.LAST_NAME }}
-      run | 
+      run: | 
         echo $FIRST_NAME $LAST_NAME
