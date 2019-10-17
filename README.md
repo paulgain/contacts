@@ -1,5 +1,4 @@
 # contacts
 Contacts
 
-
-https://github.com/paulgain/contactss/workflows/build/badge.svg
+![Build](https://github.com/paulgain/contacts/workflows/build/badge.svg)
