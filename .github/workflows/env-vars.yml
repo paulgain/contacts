@@ -10,4 +10,5 @@ jobs:
         env:
           FIRST_NAME: ${{ secrets.GITHUB_TOKEN }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
-        run: echo "$FIRST_NAME"
+          AGE: 21
+        run: echo "$AGE"
