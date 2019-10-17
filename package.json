@@ -5,6 +5,11 @@
   "repository": "https://github.com/paulgain/contacts.git",
   "author": "Paul Gain <paul.gain@digital.trade.gov.uk>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo \"No build specified\" && exit 0",
+    "test": "echo \"No test specified\" && exit 0"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
