@@ -20,10 +20,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Environment variables
-      env:
-        FIRST_NAME: ${{ secrets.FIRST_NAME }}
-        LAST_NAME: ${{ secrets.LAST_NAME }}
     - name: yarn install, build, and test
       run: |
         yarn
@@ -31,3 +27,5 @@ jobs:
         yarn test
       env:
         CI: true
+        FIRST_NAME: ${{ secrets.FIRST_NAME }}
+        LAST_NAME: ${{ secrets.LAST_NAME }}
