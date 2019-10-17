@@ -22,8 +22,8 @@ jobs:
           FIRST_NAME: ${{ secrets.FIRST_NAME }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
       run: |
-        yarn ci
-        yarn run build --if-present
+        yarn
+        yarn build --if-present
         yarn test
       env:
         CI: true
