@@ -21,13 +21,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: yarn install, build, and test
+      env:
+        CI: true
+        FIRST_NAME: Paul
+        LAST_NAME: ${{ secrets.LAST_NAME }}      
       run: |
         yarn
         yarn build --if-present
         yarn test
-      env:
-        CI: true
-        FIRST_NAME: Paul
-        LAST_NAME: ${{ secrets.LAST_NAME }}
-      run: | 
         echo $FIRST_NAME $LAST_NAME
