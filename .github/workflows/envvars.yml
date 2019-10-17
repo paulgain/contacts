@@ -1,4 +1,4 @@
-name: Environment variables
+name: envvars
 
 on: push
 
