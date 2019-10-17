@@ -14,12 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
-      env:
-        FIRST_NAME: ${{ secrets.FIRST_NAME }}
-        LAST_NAME: ${{ secrets.LAST_NAME }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Environment variables test
+      env:
+        FIRST_NAME: ${{ secrets.FIRST_NAME }}
+        LAST_NAME: ${{ secrets.LAST_NAME }}
+      run: |
+        echo ${{ secrets.FIRST_NAME }} ${{ secrets.FIRST_NAME }}
     - name: yarn install, build, and test
       run: |
         yarn
