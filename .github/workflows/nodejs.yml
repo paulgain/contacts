@@ -17,12 +17,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Environment variables test
+    - name: Environment variables
       env:
         FIRST_NAME: ${{ secrets.FIRST_NAME }}
         LAST_NAME: ${{ secrets.LAST_NAME }}
-      run: |
-        echo ${{ secrets.FIRST_NAME }}
+    - name: Display the path
+      run: echo $PATH
+      shell: bash
     - name: yarn install, build, and test
       run: |
         yarn
