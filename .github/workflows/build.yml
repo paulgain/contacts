@@ -22,7 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
   
-    - run: npm ci
+    - name: Install dependencies
+      run: yarn install
 
     - run: node client.js
       working-directory: ./redis
