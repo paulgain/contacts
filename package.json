@@ -12,6 +12,7 @@
     "lint": "echo \"No linting specified\" && exit 0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
   }
 }
