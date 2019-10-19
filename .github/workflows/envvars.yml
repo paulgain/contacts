@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Env vars
         env:
-          FIRST_NAME: ${{ secrets.GITHUB_TOKEN }}
+          FIRST_NAME: ${{ secrets.FIRST_NAME }}
           LAST_NAME: ${{ secrets.LAST_NAME }}
           AGE: 21
         run: echo "$AGE"
