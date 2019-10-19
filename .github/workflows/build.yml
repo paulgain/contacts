@@ -22,20 +22,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
   
-    - name: Install dependencies
-      run: yarn install
-
-    - run: node client.js
-      working-directory: ./redis
-      env:
-        REDIS_HOST: redis
-        REDIS_PORT: ${{ job.services.redis.ports[6379] }}
-
-    - name: Build application
-      run: yarn build
-
-    - name: Lint
-      run: yarn lint
-
-    - name: Unit tests
-      run: yarn test
+    - name: Build the Docker container image
+      run: docker build -t docker.pkg.github.com/paulgain/contacts/app-services:latest .
