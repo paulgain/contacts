@@ -24,9 +24,6 @@ jobs:
     name: A JavaScript job to say hello
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
       - name: Hello world JavaScript action step
         id: js
         uses: ./actions/js/hello-world
