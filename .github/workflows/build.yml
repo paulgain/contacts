@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Hello world Docker action step
         id: hello
-        uses: ./.github/actions/docker/hello-world
+        uses: ./actions/docker/hello-world
         with:
           who-to-greet: 'Mr Docker'
       - name: Get the output time
@@ -29,7 +29,7 @@ jobs:
           node-version: '10.x'
       - name: Hello world JavaScript action step
         id: hello
-        uses: ./.github/actions/js/hello-world
+        uses: ./actions/js/hello-world
         with:
           who-to-greet: 'Mr JavaScript'
       - name: Get the output time
