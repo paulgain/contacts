@@ -1,1 +1,1 @@
-console.log('Hello, ' + process.env.INPUT_WHO-TO-GREET);
+console.log('Hello, ' + process.env.INPUT_WHO_TO_GREET);
