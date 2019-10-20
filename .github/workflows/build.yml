@@ -12,12 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Hello world Docker action step
-        id: hello
+        id: docker
         uses: ./actions/docker/hello-world
         with:
           who-to-greet: 'Mr Docker'
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.docker.outputs.time }}"
   
   hello_world_js:
     runs-on: ubuntu-latest
@@ -28,9 +28,9 @@ jobs:
         with:
           node-version: '10.x'
       - name: Hello world JavaScript action step
-        id: hello
+        id: js
         uses: ./actions/js/hello-world
         with:
           who-to-greet: 'Mr JavaScript'
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.js.outputs.time }}"
