@@ -28,10 +28,10 @@ jobs:
         with:
           node-version: '10.x'
       - name: Hello world JavaScript action step
+        run: yarn install
         id: js
         uses: ./actions/js/hello-world
         with:
           who-to-greet: 'Mr JavaScript'
-        run: yarn install
       - name: Get the output time
         run: echo "The time was ${{ steps.js.outputs.time }}"
