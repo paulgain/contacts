@@ -28,7 +28,6 @@ jobs:
         with:
           node-version: '10.x'
       - name: Hello world JavaScript action step
-        run: yarn install
         id: js
         uses: ./actions/js/hello-world
         with:
