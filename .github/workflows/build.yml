@@ -31,4 +31,4 @@ jobs:
         id: js
         uses: ./actions/js/hello-world
         with:
-          who-to-greet: 'Mr JavaScript'
+          whoToGreet: 'Mr JavaScript'
