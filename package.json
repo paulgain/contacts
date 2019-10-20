@@ -12,8 +12,6 @@
     "lint": "echo \"No linting specified\" && exit 0"
   },
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/github": "^1.1.0",
     "express": "^4.17.1",
     "redis": "^2.8.0"
   }
