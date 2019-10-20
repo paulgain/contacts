@@ -27,4 +27,4 @@ jobs:
       - name: Hi step
         uses: ./actions/js/hello-world
         with:
-          say-hi-to: Paul
+          say_hi_to: Paul
