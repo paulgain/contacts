@@ -1,10 +1,10 @@
-name: 'Hello World'
-description: 'Sample action'
+name: Hi
+description: Say hello to a friend from an env. var.
 inputs:
-  whoToGreet:
-    description: 'The person to greet'
+  who-to-greet:
+    description: The person to greet
     required: false
-    default: 'World'
+    default: friend
 runs:
   using: node12
   main: index.js

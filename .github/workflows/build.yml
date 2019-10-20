@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  helloWorldDocker:
+  hello-world-docker:
     runs-on: ubuntu-latest
     name: A docker job to say hello
     steps:
@@ -15,11 +15,11 @@ jobs:
         id: hello
         uses: ./actions/docker/hello-world
         with:
-          whoToGreet: 'Paul'
+          who-to-greet: Paul
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
   
-  helloWorldJS:
+  hello-world-js:
     runs-on: ubuntu-latest
     name: A JavaScript job to say hi
     steps:
@@ -27,4 +27,4 @@ jobs:
       - name: Hi step
         uses: ./actions/js/hello-world
         with:
-          whoToGreet: 'JavaScript Action'
+          who-to-greet: Paul
