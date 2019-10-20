@@ -27,3 +27,5 @@ jobs:
       - name: Hello world JavaScript action step
         id: js
         uses: ./actions/js/hello-world
+        with:
+          name: 'Mr JavaScript'
