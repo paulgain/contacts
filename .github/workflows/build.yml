@@ -6,16 +6,28 @@ on:
     - master
 
 jobs:
-  hello_world_job:
+  hello_world_docker:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A docker job to say hello
     steps:
       - uses: actions/checkout@v1
-      - name: Hello world action step.
+      - name: Hello world Docker action step
         id: hello
         uses: ./.github/actions/docker/hello-world
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
+          who-to-greet: 'Mr Docker'
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+  
+  hello_world_js:
+    runs-on: ubuntu-latest
+    name: A JavaScript job to say hello
+    steps:
+      - uses: actions/checkout@v1
+      - name: Hello world JavaScript action step
+        id: hello
+        uses: ./.github/actions/js/hello-world
+        with:
+          who-to-greet: 'Mr JavaScript'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"      
