@@ -25,7 +25,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Hello world JavaScript action step
-        id: js
         uses: ./actions/js/hello-world
         with:
           name: 'Mr JavaScript'
