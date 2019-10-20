@@ -27,4 +27,4 @@ jobs:
       - name: Hello world JavaScript action step
         uses: ./actions/js/hello-world
         with:
-          name: 'Mr JavaScript'
+          whoToGreet: 'Mr JavaScript'
