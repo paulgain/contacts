@@ -1,1 +1,1 @@
-console.log('Hi, ' + process.env.INPUT_SAYHITO);
+console.log('Hi, ' + process.env.INPUT_NAME);
