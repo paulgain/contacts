@@ -1,7 +1,7 @@
 name: Hi
 description: Say hello to a friend from an env. var.
 inputs:
-  name:
+  say-hi-to:
     description: The person to greet
     required: false
     default: friend
